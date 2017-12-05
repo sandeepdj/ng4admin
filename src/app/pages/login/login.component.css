@@ -1,0 +1,33 @@
+.login-section {
+    padding-top: 10%;
+}
+
+.height100 {
+    height: 100px;
+}
+
+.login-button {
+    background-color: #8601de;
+    color: #fff;
+}
+
+.create-button {
+    border-color: #3f51b5;
+    border: 1px solid;
+    color: #3f51b5;
+    width: 80%;
+}
+
+.create-button:hover {
+    background-color: #3f51b5;
+    color: #fff;
+}
+
+@media (max-width:480px) {
+    .login-card {
+        background: transparent;
+        box-shadow: none !important;
+    }
+}
+
+;

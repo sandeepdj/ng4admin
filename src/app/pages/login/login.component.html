@@ -1,0 +1,42 @@
+<section class="login-section">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-4">
+                    <form (ngSubmit)="doLogin()">
+                        <mat-card class="login-card">
+                            <mat-card-content>
+                                <p class="center">
+                                    <img src="https://dhananjay25.files.wordpress.com/2017/07/clip_image002.png" class="height100">
+                                </p>
+                                <p>
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="Username" autofocus [(ngModel)]="user.username" name="username" required>
+                                    </mat-form-field>
+                                </p>
+                                <p>
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="Password" [(ngModel)]="user.password" name="password" required>
+                                    </mat-form-field>
+                                </p>
+                                <p style="text-align:right;">
+                                    Forgot password ?
+                                </p>
+                                <p class="center">
+                                    <button mat-raised-button color="primary"> Login </button>
+                                </p>
+
+                                <br><br>
+                                <p class="center">
+                                    <button mat-raised-button class="create-button"> Contact </button>
+                                </p>
+
+
+                            </mat-card-content>
+                        </mat-card>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,171 @@
+<div class="app-wrap"> 
+<section class="app-header-wrapper">
+    <div class="container-fluid page-wrap">
+        <div class="row">
+            <div class="col-md-12 padding0">
+                <mat-toolbar class="header-toolbar">
+                    <mat-toolbar-row class="paddingleft0">
+                            <button mat-mini-fab color="primary" class="menu-button-icon" (click)="toggleMe()"><i class="material-icons">menu</i></button>
+
+                        <!-- <button mat-button class="menu-button-icon" (click)="toggleMe()"><i class="material-icons">menu</i></button> -->
+                        <a><img src="assets/logo.png" class="header-logo fulllogo"></a>
+                        <a class="sml-logo"><img src="assets/slogo.png" class="smalllogo"></a>
+                        
+                        <span class="header-spacer"></span>
+                        <i class="material-icons">open_with</i>
+                        <i class="material-icons">notifications</i>
+                         <img src="assets/user-3.png" class="profile_icon"> 
+                      </mat-toolbar-row>
+                  </mat-toolbar>                    
+            </div>
+        </div>
+    </div>
+ </section>
+ <section class="content-wrap" [ngClass]="toggle ? 'minisidebar' : 'full-menu'">
+    <div class="page-sidebar" >
+        <ul class="side-menu">
+            <li>
+                <a class="menu-link"> 
+                    <span><i class="material-icons">home</i></span>
+                    <span class="menu-text"> Menu 1</span>
+                </a>
+                <ul class="sub-sidemenu">
+                    <li>
+                        <a>
+                            <span> menu item 1</span>
+                        </a>
+                    </li>
+                    <li> 
+                        <a>
+                            <span> menu item 1</span>
+                        </a>
+                    </li> 
+                    <li>
+                       <a>
+                            <span> menu item 1</span>
+                        </a>    
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="menu-link"> 
+                    <span><i class="material-icons">dashboard</i></span>
+                    <span  class="menu-text"> Menu 2</span>
+                </a>
+                <ul class="sub-sidemenu">
+                        <li>
+                            <a>
+                                <span> menu item 1</span>
+                            </a>
+                        </li>
+                        <li> 
+                            <a>
+                                <span> menu item 1</span>
+                            </a>
+                        </li> 
+                        <li>
+                           <a>
+                                <span> menu item 1</span>
+                            </a>    
+                        </li>
+                    </ul>
+            </li>
+            
+            <li>
+                <a class="menu-link"> 
+                    <span><i class="material-icons">home</i></span>
+                    <span  class="menu-text"> Menu 3</span>
+                </a>
+                <ul class="sub-sidemenu">
+                        <li>
+                            <a>
+                                <span> menu item 1</span>
+                            </a>
+                        </li>
+                        <li> 
+                            <a>
+                                <span> menu item 1</span>
+                            </a>
+                        </li> 
+                        <li>
+                           <a>
+                                <span> menu item 1</span>
+                            </a>    
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                <a class="menu-link"> 
+                    <span><i class="material-icons">dashboard</i></span>
+                    <span  class="menu-text"> Menu 4</span>
+                </a>
+                <ul class="sub-sidemenu">
+                        <li>
+                            <a>
+                                <span> menu item 1</span>
+                            </a>
+                        </li>
+                        <li> 
+                            <a>
+                                <span> menu item 1</span>
+                            </a>
+                        </li> 
+                        <li>
+                           <a>
+                                <span> menu item 1</span>
+                            </a>    
+                        </li>
+                    </ul>
+            </li>
+             
+                <li>
+                <a class="menu-link"> 
+                    <span><i class="material-icons">home</i></span>
+                    <span  class="menu-text"> Menu 5</span>
+                </a>
+                <ul class="sub-sidemenu">
+                        <li>
+                            <a>
+                                <span> menu item 1</span>
+                            </a>
+                        </li>
+                        <li> 
+                            <a>
+                                <span> menu item 1</span>
+                            </a>
+                        </li> 
+                        <li>
+                           <a>
+                                <span> menu item 1</span>
+                            </a>    
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                <a class="menu-link"> 
+                    <span><i class="material-icons">dashboard</i></span>
+                    <span  class="menu-text"> Menu 1</span>
+                </a>
+            </li>
+             <li>
+                <a class="menu-link"> 
+                    <span><i class="material-icons">home</i></span>
+                    <span  class="menu-text"> Menu 1</span>
+                </a>
+            </li>
+            <li>
+                <a class="menu-link"> 
+                    <span><i class="material-icons">dashboard</i></span>
+                    <span  class="menu-text"> Menu 1</span>
+                </a>
+            </li>
+          </ul>
+         
+    </div>
+    <div class="content-block">
+        <router-outlet></router-outlet>
+    </div>
+ </section>
+
+
+</div>

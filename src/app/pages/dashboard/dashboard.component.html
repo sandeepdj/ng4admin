@@ -1,0 +1,157 @@
+ <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <mat-card class="relativeleft w100 paddin10 wcard top10">
+                <mat-card-content>
+                  <div class="wleft relativeleft w50">
+                      <i class="material-icons">shopping_cart</i>
+                  </div>
+                  <div class="wright relativeleft w50">
+                      <p class="mb0 font24 center">500</p>
+                      <p class="mb0 center">New</p>
+                  </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="relativeleft w100 paddin10 wcard top10">
+                <mat-card-content>
+                  <div class="wleft relativeleft w50">
+                      <i class="material-icons">shopping_cart</i>
+                  </div>
+                  <div class="wright relativeleft w50">
+                      <p class="mb0 font24 center">500</p>
+                      <p class="mb0 center">New</p>
+                  </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="relativeleft w100 paddin10 wcard top10">
+                <mat-card-content>
+                  <div class="wleft relativeleft w50">
+                      <i class="material-icons">shopping_cart</i>
+                  </div>
+                  <div class="wright relativeleft w50">
+                      <p class="mb0 font24 center">500</p>
+                      <p class="mb0 center">New</p>
+                  </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="relativeleft w100 paddin10 wcard top10">
+                <mat-card-content>
+                  <div class="wleft relativeleft w50">
+                      <i class="material-icons">shopping_cart</i>
+                  </div>
+                  <div class="wright relativeleft w50">
+                      <p class="mb0 font24 center">500</p>
+                      <p class="mb0 center">New</p>
+                  </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="row top10">
+            <div class="col-md-6 col-sm-12  col-xs-12">
+        <mat-card>
+
+            <mat-card-content>
+                <h4>Line Chart</h4>
+                <hr>
+                    <div style="display: block;">
+                    <canvas baseChart width="400" height="300"
+                    [datasets]="lineChartData"
+                    [labels]="lineChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors"
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+                </div>
+            </mat-card-content>
+        </mat-card>
+           </div>
+
+
+           <div class="col-md-6 col-sm-12  col-xs-12">
+                <mat-card>
+        
+                    <mat-card-content>
+                            <h4>Pie Chart</h4>
+                            <hr>
+                            <div style="display: block;">
+                                    <canvas baseChart  width="400" height="300"
+                                    [datasets]="barChartData"
+                                    [labels]="barChartLabels"
+                                    [options]="barChartOptions"
+                                    [legend]="barChartLegend"
+                                    [chartType]="barChartType"
+                                    (chartHover)="chartHovered($event)"
+                                    (chartClick)="chartClicked($event)"></canvas>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+                   </div>
+          
+    </div>
+
+    <div class="row top10">
+        <div class="col-md-12">
+            <mat-card>
+                <mat-card-content>
+                    <h4>User List with pagination</h4>
+                
+            <div class="tabled-header">
+                <mat-form-field>
+                  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                </mat-form-field>
+              </div>
+              
+              <div class="tabled-container ">
+              
+                <mat-table [dataSource]="dataSource" matSort>
+              
+                  <!-- ID Column -->
+                  <ng-container matColumnDef="id">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+                  </ng-container>
+              
+                  <!-- Progress Column -->
+                  <ng-container matColumnDef="progress">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Progress </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> {{row.progress}}% </mat-cell>
+                  </ng-container>
+              
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+                  </ng-container>
+              
+                  <!-- Color Column -->
+                  <ng-container matColumnDef="color">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Color </mat-header-cell>
+                    <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
+                  </ng-container>
+              
+                  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;">
+                  </mat-row>
+                </mat-table>
+              
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+              </div>
+            </mat-card-content>
+        </mat-card>
+              
+              <!-- Copyright 2017 Google Inc. All Rights Reserved.
+                  Use of this source code is governed by an MIT-style license that
+                  can be found in the LICENSE file at http://angular.io/license -->
+        </div>
+    </div>
+ </div>
